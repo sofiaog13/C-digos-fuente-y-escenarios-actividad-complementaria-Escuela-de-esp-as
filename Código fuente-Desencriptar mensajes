@@ -1,0 +1,35 @@
+#modulo3 act.complementaria
+#desencriptar mensajes morse
+
+walk=9
+muros=0
+print "muros=",muros
+beepers=0
+print "beepers=",beepers
+
+def des():
+    global walk
+    global muros
+    global beepers
+    turn_left()
+    if not front_is_clear():
+        muros=muros+1
+    if on_beeper():
+        beepers=beepers+1
+    repeat(turn_left,3)
+    move()
+    walk=walk-1
+
+while (walk>0):
+    des()
+
+print "muros=",muros 
+print "beepers=",beepers
+
+if (muros==5 and beepers==1):
+    print "mensaje desencriptado: ok"
+
+if (muros==3 and beepers==6):
+    print "mensaje desencriptado: sos"
+
+turn_off()
