@@ -1,0 +1,52 @@
+#modulo3 act.complementaria
+#patrones desplazamiento
+
+import random
+dado=random.randrange(1,6)
+beepers=0
+
+def start():
+    print "mover",dado,"espacios"
+    if (dado==1 or dado==2 or dado==3 or dado==4):
+        repeat(turn_left,3)
+        for i in range(dado):
+            move()
+    else:
+        turn_left()
+        for i in range(dado):
+            move()
+
+start()
+while not on_beeper():
+    if (dado==1 or dado==2 or dado==3 or dado==4):
+        dado=random.randrange(1,6)
+        print "mover",dado,"espacios"
+        if (dado==1 or dado==2 or dado==3 or dado==4):
+            for i in range(dado):
+                move()
+        else:
+            repeat(turn_left,2)
+            for i in range(dado):
+                move()
+    elif (dado==5 or dado==6):
+        dado=random.randrange(1,6)
+        print "mover",dado,"espacios"
+        if (dado==1 or dado==2 or dado==3 or dado==4):
+            repeat(turn_left,2)
+            for i in range(dado):
+                move()
+        else:
+            for i in range(dado):
+                move()
+
+while on_beeper():
+    pick_beeper()
+    beepers=beepers+1
+
+if (beepers==1):
+    print "Llegaste a la izquierda"
+
+if (beepers==2):
+    print "Llegaste a la derecha"
+
+turn_off()
