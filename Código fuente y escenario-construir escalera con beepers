@@ -1,0 +1,44 @@
+#modulo3 act.complementaria
+#escalera de beepers
+
+escalones=input_int("ingrese numero de escalones deseados (entre 1 y 9)")
+
+print escalones
+
+escalones2=escalones
+
+def esc():
+
+    global escalones
+
+    for j in range (escalones):
+
+        if carries_beepers():
+
+            put_beeper()
+            move()
+
+
+
+
+def regresar():
+    global escalones
+    global escalones2
+    escalones=escalones-1
+    escalones2=escalones2-1
+    turn_left()
+    move()
+    turn_left()
+    for i in range (escalones2):
+        move()
+    repeat(turn_left,2)
+
+
+while (escalones>0):
+    esc()
+    regresar()
+
+turn_off()
+
+
+#escenario: es el escenario predeterminado en RUR-PLE
