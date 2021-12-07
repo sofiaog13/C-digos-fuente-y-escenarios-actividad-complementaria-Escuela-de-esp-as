@@ -1,0 +1,41 @@
+#modulo3 act.complementaria
+#red de espias
+
+R1=UsedRobot(5,2,'E',colour='light blue')
+R2=UsedRobot(6,4,'E',colour='light blue')
+R3=UsedRobot(10,5,'W')
+
+mensaje=input_int("Ingrese el mensaje secreto que desea enviar")
+print "mensaje:",mensaje
+mensaje2=input_int("Ingrese un mensaje incorrecto para evitar a los espias")
+print "mensaje emergencia:",mensaje2
+
+repeat(move,8)
+turn_left()
+move()
+turn_left()
+repeat(move,3)
+print "alto un espia"
+print "bot a espia: El mensaje es",mensaje2
+repeat(move,3)
+repeat(turn_left,3)
+move()
+repeat(turn_left,3)
+repeat(move,4)
+turn_left()
+move()
+turn_left()
+print "alto un espia"
+print "bot a espia: El mensaje es",mensaje2
+repeat(move,6)
+repeat(turn_left,3)
+move()
+repeat(turn_left,3)
+repeat(move,8)
+print "Llegamos al final y el mensaje no fue descubierto"
+print "bot a bot aliado: el mensaje es",mensaje
+
+turn_off()
+R1.turn_off()
+R2.turn_off()
+R3.turn_off()
