@@ -1,0 +1,43 @@
+#modulo3 act.complementaria
+#organizar numeros
+
+beepers=0
+numeros=[]
+
+for i in range (6):
+    move()
+    while on_beeper():
+        pick_beeper()
+        beepers=beepers+1
+
+    numeros.append(beepers)
+    print numeros
+    beepers=beepers-beepers
+
+    repeat(turn_left,2)
+    move()
+    turn_left()
+    move()
+    turn_left()
+
+turn_left()
+repeat(move,6)
+repeat(turn_left,3)
+
+numeros.sort()
+print numeros
+
+for i in range (6):
+    move()
+    while (numeros[i]!=0):
+        if carries_beepers():
+            put_beeper()
+        numeros[i]=numeros[i]-1
+    repeat(turn_left,2)
+    move()
+    turn_left()
+    move()
+    turn_left()
+
+
+turn_off()
