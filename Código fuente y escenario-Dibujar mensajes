@@ -1,0 +1,241 @@
+#modulo3 act.complementaria
+#mensajes para avion espia
+
+
+numero=input_int("ingrese un numero del 0 al 9 que desee dibujar")
+print numero
+
+def cero():
+    repeat(move,2)
+    turn_left()
+    repeat(move,3)
+    repeat(turn_left,1)
+    repeat(move,2)
+    repeat(turn_left,1)
+    repeat(move,3)
+
+def uno():
+    repeat(move,2)
+    repeat(turn_left,2)
+    move()
+    repeat(turn_left,3)
+    repeat(move,2)
+    turn_left()
+    repeat(move,1)
+
+
+def dos():
+    repeat(move,2)
+
+    repeat(turn_left,2)
+
+    repeat(move,2)
+
+    repeat(turn_left,3)
+
+    move()
+
+    repeat(turn_left,3)
+
+    repeat(move,2)
+
+    turn_left()
+
+    move()
+
+    turn_left()
+
+    repeat(move,2)
+
+def tres():
+    repeat(move,2)
+
+    turn_left()
+
+    move()
+
+    turn_left()
+
+    repeat(move,2)
+
+    repeat(turn_left,2)
+
+    repeat(move,2)
+
+    turn_left()
+
+    move()
+
+    turn_left()
+
+    repeat(move,2)
+
+def cuatro():
+    R1=UsedRobot(1,3,'E')
+    R1.turn_left()
+
+    R1.turn_left()
+
+    R1.turn_left()
+
+    R1.move()
+
+    R1.turn_left()
+
+    R1.move()
+
+    R1.move()
+
+    R1.turn_left()
+
+    R1.move()
+
+    R1.turn_left()
+
+    R1.turn_left()
+
+    R1.move()
+
+    R1.move()
+
+def cinco():
+    repeat(move,2)
+    turn_left()
+    move()
+    turn_left()
+    repeat(move,2)
+    repeat(turn_left,3)
+    move()
+    repeat(turn_left,3)
+    repeat(move,2)
+
+def seis():
+    turn_left()
+    move()
+    repeat(turn_left,3)
+    repeat(move,2)
+    repeat(turn_left,3)
+    move()
+    repeat(turn_left,3)
+    repeat(move,2)
+    repeat(turn_left,3)
+    repeat(move,2)
+    repeat(turn_left,3)
+    repeat(move,2)
+
+def siete():
+    R1=UsedRobot(1,3,'E')
+    R1.move()
+    R1.move()
+    R1.turn_left()
+    R1.turn_left()
+    R1.turn_left()
+    R1.move()
+    R1.turn_left()
+    R1.move()
+    R1.turn_left()
+    R1.turn_left()
+    R1.move()
+    R1.move()
+    R1.turn_left()
+    R1.turn_left()
+    R1.move()
+    R1.turn_left()
+    R1.turn_left()
+    R1.turn_left()
+    R1.move()
+    R1.turn_off()
+
+def ocho():
+    repeat(move,2)
+    turn_left()
+    repeat(move,2)
+    turn_left()
+    repeat(move,2)
+    turn_left()
+    move()
+    turn_left()
+    repeat(move,2)
+    repeat(turn_left,2)
+    repeat(move,2)
+    turn_left()
+    move()
+
+def nueve():
+    repeat(move,2)
+    turn_left()
+    repeat(move,2)
+    turn_left()
+    repeat(move,2)
+    turn_left()
+    move()
+    turn_left()
+    repeat(move,2)
+    
+if numero==0:
+    cero()
+    turn_off()
+    R1.turn.off()
+
+if numero==1:
+    uno()
+    turn_off()
+
+    R1.turn.off()
+
+if numero==2:
+    dos()
+    turn_off()
+
+    R1.turn.off()
+    
+if numero==3:
+
+    tres()
+    turn_off()
+
+    R1.turn.off()
+
+if numero==4:
+
+    cuatro()
+    turn_off()
+
+    R1.turn.off()
+
+if numero==5:
+
+    cinco()
+    turn_off()
+
+    R1.turn.off()
+
+if numero==6:
+
+    seis()
+    turn_off()
+
+    R1.turn.off()
+
+if numero==7:
+
+    siete()
+    turn_off()
+
+    R1.turn.off()
+
+if numero==8:
+
+    ocho()
+    turn_off()
+
+    R1.turn.off()
+
+if numero==9:
+
+    nueve()
+    turn_off()
+
+    R1.turn.off()
+
+#escenario: es el escenario predeterminado en RUR-PLE
